@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>School Supply Drop</title>
+        <link rel="icon" type="image/x-icon" href="D:\School Supply Drop Website\Images\School_Supply_Drop_Logo.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class="navbar">
+            <img src="D:\School Supply Drop Website\Images\School_Supply_Drop_Logo.png" alt="Logo" width="75px" height="75px" class="d-inline-block align-text-top">
+            <h1>School Supply Drop</h1>
+        </div>
+
+        <div class="container-fluid img-and-price">
+            <!-- Image Box -->
+            <div class="img-box">
+                <img src="D:\School Supply Drop Website\Images\Empty_Box.png" style="z-index: 1; display: inline !important;">
+                <img class="order-image" src="D:\School Supply Drop Website\Images\Eraser Box.png" style="z-index: 2;" id="eraserBoxImg">
+                <img class="order-image" src="D:\School Supply Drop Website\Images\Post-it Notes Box.png" style="z-index: 2;" id="postItNotesBoxImg">
+                <img class="order-image" src="D:\School Supply Drop Website\Images\Pencil Sharpener Box.png" style="z-index: 2;" id="pencilSharpenerBoxImg">
+                <img class="order-image" src="D:\School Supply Drop Website\Images\Gum Box.png" style="z-index: 3;" id="gumBoxImg">
+                <img class="order-image" src="D:\School Supply Drop Website\Images\Pens Box.png" style="z-index: 4;" id="pensBoxImg">
+                <img class="order-image" src="D:\School Supply Drop Website\Images\Pencil Box.png" style="z-index: 4;" id="pencilsBoxImg">
+                <img class="order-image" src="D:\School Supply Drop Website\Images\Mechanical Pencils Box.png" style="z-index: 2;" id="mechanicalPencilsBoxImg">
+                <img class="order-image" src="D:\School Supply Drop Website\Images\Highlighter Box.png" style="z-index: 4;" id="highlightersBoxImg">
+                <img class="order-image" src="D:\School Supply Drop Website\Images\Sharpie Box.png" style="z-index: 4;" id="sharpieBoxImg">
+                <img class="order-image" src="D:\School Supply Drop Website\Images\Notebook Box.png" style="z-index: 0;" id="notebookBoxImg">
+            </div>
+
+            <!-- Checkout -->
+            <div class="checkout-area">
+                <div class="checkout-box">
+                    <h1 class="checkout-price" id="checkout-price">$0.00</h1>
+                    <button type="button" class="btn btn-outline-success checkout-btn" id="checkout-btn">Place Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item Select-->
+        <div class="item-boxes">
+            <!-- Mechanical Pencils --> 
+            <div class="item-box" id="mechanicalPencils" style="background-image: url('D:/School Supply Drop Website/Images/Mechanical Pencils.jpeg');">
+                <div class="item-info">
+                    <div class="item-info-top">
+                        <p class="item-name">Mechanical Pencils</p>
+                        <svg class="checkbox-unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <svg class="checkbox-checked" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="item-info-bottom">
+                        <p class="item-count">2 ct</p>
+                        <p class="item-price">$1.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pencils --> 
+            <div class="item-box" id="pencils" style="background-image: url('D:/School Supply Drop Website/Images/Pencils.jpeg');">
+                <div class="item-info">
+                    <div class="item-info-top">
+                        <p class="item-name">Wooden Pencils</p>
+                        <svg class="checkbox-unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <svg class="checkbox-checked" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="item-info-bottom">
+                        <p class="item-count">2 ct</p>
+                        <p class="item-price">$1.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pencil Sharpener --> 
+            <div class="item-box" id="pencilSharpener" style="background-image: url('D:/School Supply Drop Website/Images/Pencil Sharpener.jpeg');">
+                <div class="item-info">
+                    <div class="item-info-top">
+                        <p class="item-name">Pencil Sharpener</p>
+                        <svg class="checkbox-unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <svg class="checkbox-checked" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="item-info-bottom">
+                        <p class="item-count">1 ct</p>
+                        <p class="item-price">$1.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Eraser --> 
+            <div class="item-box" id="eraser" style="background-image: url('D:/School Supply Drop Website/Images/Erasers.jpeg');">
+                <div class="item-info">
+                    <div class="item-info-top">
+                        <p class="item-name">Eraser</p>
+                        <svg class="checkbox-unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <svg class="checkbox-checked" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="item-info-bottom">
+                        <p class="item-count">1 ct</p>
+                        <p class="item-price">$1.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pens --> 
+            <div class="item-box" id="pens" style="background-image: url('D:/School Supply Drop Website/Images/Pens.jpeg');">
+                <div class="item-info">
+                    <div class="item-info-top">
+                        <p class="item-name">Pens</p>
+                        <svg class="checkbox-unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <svg class="checkbox-checked" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="item-info-bottom">
+                        <p class="item-count">2 ct</p>
+                        <p class="item-price">$1.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Sharpie --> 
+            <div class="item-box" id="sharpie" style="background-image: url('D:/School Supply Drop Website/Images/Sharpies.jpeg');">
+                <div class="item-info">
+                    <div class="item-info-top">
+                        <p class="item-name">Sharpie</p>
+                        <svg class="checkbox-unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <svg class="checkbox-checked" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="item-info-bottom">
+                        <p class="item-count">1 ct</p>
+                        <p class="item-price">$1.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Highlighters --> 
+            <div class="item-box" id="highlighters" style="background-image: url('D:/School Supply Drop Website/Images/Highlighters.jpeg');">
+                <div class="item-info">
+                    <div class="item-info-top">
+                        <p class="item-name">Highlighters</p>
+                        <svg class="checkbox-unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <svg class="checkbox-checked" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="item-info-bottom">
+                        <p class="item-count">5 ct</p>
+                        <p class="item-price">$2.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Post-it Notes --> 
+            <div class="item-box" id="postItNotes" style="background-image: url('D:/School Supply Drop Website/Images/Post-it Notes.jpeg');">
+                <div class="item-info">
+                    <div class="item-info-top">
+                        <p class="item-name">Post-it Notes Stack</p>
+                        <svg class="checkbox-unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <svg class="checkbox-checked" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="item-info-bottom">
+                        <p class="item-count">1 ct</p>
+                        <p class="item-price">$1.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Notebook --> 
+            <div class="item-box" id="notebook" style="background-image: url('D:/School Supply Drop Website/Images/Notebook.jpeg');">
+                <div class="item-info">
+                    <div class="item-info-top">
+                        <p class="item-name">Notebook</p>
+                        <svg class="checkbox-unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <svg class="checkbox-checked" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="item-info-bottom">
+                        <p class="item-count">1 ct</p>
+                        <p class="item-price">$2.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Gum --> 
+            <div class="item-box" id="gum" style="background-image: url('D:/School Supply Drop Website/Images/Gum.jpeg');">
+                <div class="item-info">
+                    <div class="item-info-top">
+                        <p class="item-name">Gum Pack</p>
+                        <svg class="checkbox-unchecked" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <svg class="checkbox-checked" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                        </svg>
+                    </div>
+                    <div class="item-info-bottom">
+                        <p class="item-count">1 ct</p>
+                        <p class="item-price">$1.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
