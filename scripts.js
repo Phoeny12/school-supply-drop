@@ -1,10 +1,14 @@
+// ELEMENT REFERENCES
 const itemBoxes = document.querySelectorAll(".item-box");
 const checkoutPriceBox = document.getElementById("checkout-price");
 const checkoutBtn = document.getElementById("checkout-btn");
 
+// GLOBAL VARIABLES
 let checkoutCost = 0;
 let orderNumber = 1;
+let profit = 0;
 
+// ITEM PRICES
 const prices = {
   mechanicalPencils: 1,
   pencils: 1,
@@ -18,10 +22,25 @@ const prices = {
   notebook: 2,
 };
 
-// Add click listeners
-itemBoxes.forEach(box => box.addEventListener("click", () => toggleBox(box)));
+// TOTAL BOUGHT TRACKER
+let totalBoughtItems = {
+  mechanicalPencils: 0,
+  pencils: 0,
+  pencilSharpener: 0,
+  eraser: 0,
+  pens: 0,
+  sharpie: 0,
+  highlighters: 0,
+  postItNotes: 0,
+  gum: 0,
+  notebook: 0,
+};
 
-// Toggle a box selection
+// EVENT LISTENERS
+itemBoxes.forEach(box => box.addEventListener("click", () => toggleBox(box)));
+checkoutBtn.addEventListener("click", placeOrder);
+
+// TOGGLE ITEM BOX SELECTION
 function toggleBox(box) {
   const unchecked = box.querySelector(".checkbox-unchecked");
   const checked = box.querySelector(".checkbox-checked");
@@ -30,37 +49,52 @@ function toggleBox(box) {
 
   const isActive = box.classList.toggle("active");
 
-  // Update checkbox visuals
+  // Checkbox visuals
   if (unchecked) unchecked.style.display = isActive ? "none" : "inline";
   if (checked) checked.style.display = isActive ? "inline" : "none";
 
-  // Update border
+  // Border color
   box.style.border = isActive ? "3px solid #e04145" : "2px solid #4d4d4d";
 
-  // Update box image
+  // Box image
   if (img) img.style.display = isActive ? "inline" : "none";
 
-  // Update checkout cost
+  // Update total cost and profit
   checkoutCost += isActive ? price : -price;
+  profit += isActive ? price : -price;
   checkoutPriceBox.innerHTML = `$${checkoutCost.toFixed(2)}`;
 }
 
-// Place order
-checkoutBtn.addEventListener("click", () => {
+// PLACE ORDER FUNCTION
+function placeOrder() {
   const selectedItems = Array.from(document.querySelectorAll(".item-box.active"))
     .map(box => box.querySelector(".item-name").textContent);
+
   if (checkoutCost > 0) {
     console.log(`Order ${orderNumber}:`);
-    selectedItems.forEach(item => console.log(item));
-    console.log("Total cost: $" + checkoutCost.toFixed(2));
     console.log("--------------------");
+    selectedItems.forEach(item => console.log(item));
+    console.log("--------------------");
+    console.log("Total cost: $" + checkoutCost.toFixed(2));
+    console.log("====================");
+
+    // Update total bought count
+    selectedItems.forEach(item => {
+      const key = item.replace(/\s+/g, '');
+      const formattedKey = key.charAt(0).toLowerCase() + key.slice(1);
+      if (totalBoughtItems.hasOwnProperty(formattedKey)) {
+        totalBoughtItems[formattedKey] += 1;
+      }
+    });
+
     orderNumber++;
-  };
+  }
 
+  // Reset for next customer
   resetOrder();
-});
+}
 
-// Reset all selections for next customer
+// RESET AFTER EACH CUSTOMER
 function resetOrder() {
   checkoutCost = 0;
   checkoutPriceBox.innerHTML = "$0.00";
@@ -79,3 +113,17 @@ function resetOrder() {
     img.style.display = "none";
   });
 }
+
+// DAILY METRICS FUNCTION
+function getMetrics() {
+  console.log("----- DAILY METRICS -----");
+  for (const item in totalBoughtItems) {
+    console.log(`${item}: ${totalBoughtItems[item]}`);
+  }
+  console.log("--------------------");
+  console.log(`Total Orders Today: ${orderNumber - 1}`);
+  console.log(`Total Profit: $${profit.toFixed(2)}`);
+  console.log("====================");
+}
+
+window.getMetrics = getMetrics;
