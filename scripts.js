@@ -16,10 +16,24 @@ const prices = {
   eraser: 1,
   pens: 1,
   sharpie: 1,
+  highlighters: 1,
+  postItNotes: 1,
+  gum: 2,
+  notebook: 2,
+};
+
+// ITEM COUNT
+const itemAmount = {
+  mechanicalPencils: 2,
+  pencils: 4,
+  pencilSharpener: 1,
+  eraser: 2,
+  pens: 2,
+  sharpie: 2,
   highlighters: 2,
   postItNotes: 1,
   gum: 1,
-  notebook: 2,
+  notebook: 1,
 };
 
 // TOTAL BOUGHT TRACKER
@@ -73,7 +87,13 @@ function placeOrder() {
   if (checkoutCost > 0) {
     console.log(`Order ${orderNumber}:`);
     console.log("--------------------");
-    selectedItems.forEach(item => console.log(item));
+    selectedItems.forEach(item => {
+      const key = item.replace(/\s+/g, '');
+      const formattedKey = key.charAt(0).toLowerCase() + key.slice(1);
+      
+      const amount = itemAmount[formattedKey] || 0; // fallback in case key not found
+      console.log(`${amount} ${item}`);
+    });
     console.log("--------------------");
     console.log("Total cost: $" + checkoutCost.toFixed(2));
     console.log("====================");
@@ -86,7 +106,7 @@ function placeOrder() {
         totalBoughtItems[formattedKey] += 1;
       }
     });
-
+    alert("Order Place Successfully!\nYour total is: $" + checkoutCost.toFixed(2))
     orderNumber++;
   }
 
@@ -122,7 +142,7 @@ function getMetrics() {
   }
   console.log("--------------------");
   console.log(`Total Orders Today: ${orderNumber - 1}`);
-  console.log(`Total Profit: $${profit.toFixed(2)}`);
+  console.log(`Total Revenue: $${profit.toFixed(2)}`);
   console.log("====================");
 }
 
